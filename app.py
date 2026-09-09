@@ -1,4 +1,4 @@
-pythonimport pandas as pd
+import pandas as pd
 import re
 import streamlit as st
 from streamlit_folium import st_folium
