@@ -39,7 +39,7 @@ def nips_to_wgs84(nips_token, zone, square):
             
         mgrs_string = f"{zone}{square}{easting_raw}{northing_raw}"
         m = MGRS()
-        lat, lon = m.toWgs(mgrs_string.encode('utf-8'))
+        lat, lon = m.to_wgs(mgrs_string.encode('utf-8'))
         return {"Токен NIPS": nips_token, "MGRS": mgrs_string, "Широта (Lat)": round(lat, 5), "Долгота (Lon)": round(lon, 5), "Статус": "Успешно"}
     except Exception as e:
         return {"Токен NIPS": nips_token, "MGRS": "Ошибка", "Широта (Lat)": None, "Долгота (Lon)": None, "Статус": f"MGRS error: {str(e)}"}
