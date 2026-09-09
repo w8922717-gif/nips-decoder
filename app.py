@@ -61,7 +61,7 @@ if raw_data:
             
     df = pd.DataFrame(processed_records)
     df_valid = df[df["Широта (Lat)"].notna()].copy()
-    col1, col2 = st.columns()
+    col1, col2 = st.columns(2)
     
     with col1:
         st.subheader("📊 Результаты расшифровки")
